@@ -74,7 +74,7 @@ public class PetServiceTest extends AbstractTestCase {
                 "娇生惯养\n" +
                 "哈士奇有时候就跟一个小婴儿一样，特别是生病的时候，又乖巧，又让人怜爱。真是让人又恨又爱。\n" +
                 "表情\n" +
-                "哈士奇独特的外表，有时候脸上露出的那种表情，真是让你啼笑皆非。");
+                "哈士奇独特的外表，有时候脸上露出的那种表情，真是让你啼笑皆非孤鸿寡鹄孤鸿寡鹄。");
         petService.newPet(pet);
     }
 
