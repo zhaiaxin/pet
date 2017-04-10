@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.pandawork.mapper.StudentMapper">
+
+    <select id="countAll" resultType="int">
+        SELECT COUNT(1)
+        FROM `t_student`
+    </select>
+
+    <select id="queryById" resultMap="pw.Student" >
+        SELECT *
+        FROM `t_student`
+        WHERE `id` = #{id}
+    </select>
+
+    <select id="queryByName" resultMap="pw.Student">
+        SELECT *
+        FROM `t_student`
+        WHERE `name` LIKE '% "#{student.studentName}" %'
+    </select>
+
+    <insert id="newStudent">
+        INSERT INTO `t_student`
+        (`id`, `student_num`, `name`, `sex`,
+        `grade`, `class_num`, `college`,
+        `birthday`, `is_good_student`)
+        VALUES (#{student.id}, #{student.studentNum},
+        #{student.studentName}, #{student.sex},
+        #{student.grade}, #{student.classNum},
+        #{student.college}, #{student.birthday},
+        #{student.goodStudent})
+    </insert>
+
+    <update id="update">
+        UPDATE `t_student`
+        SET `student_num` = #{student.studetNum},
+            `name` = #{student.studentName},
+            `sex` = #{student.sex},
+            `grade` = #{student.grade},
+            `class_num` = #{student.classNum},
+            `college` = #{student.college},
+            `birthday` = #{student.birthday},
+            `is_good_student` = #{student.goodStudent}
+        WHERE `id` = #{student.id}
+    </update>
+
+    <delete id="delById">
+        DELETE FROM `t_student`
+        WHERE `id` = #{id}
+    </delete>
+
+    <select id="listAll" resultMap="pw.Student">
+        SELECT *
+        FROM `t_student`
+    </select>
+
+</mapper>

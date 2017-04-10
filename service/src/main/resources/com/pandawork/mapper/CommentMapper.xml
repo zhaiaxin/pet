@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pandawork.mapper.CommentMapper">
+
+    <insert id="insert">
+        INSERT INTO `t_comment`
+        (`content`,`userName`,`cartoon_id`)
+        VALUES
+        (#{comment.content},#{comment.userName},#{comment.cartoonId})
+    </insert>
+
+    <delete id="deleteById">
+        DELETE FROM `t_comment`
+        WHERE `id` = #{id}
+    </delete>
+
+    <select id="queryById" resultMap="pw.Comment">
+        SELECT id,content,userName
+        FROM `t_comment`
+        WHERE `id` = #{id}
+    </select>
+
+    <select id="list" resultMap="pw.Comment">
+        SELECT e.userName,e.content,e.created_time,e.id,e.cartoon_id
+        FROM  `t_comment` AS e,`t_cartoon` AS d WHERE e.cartoon_id=d.id
+--         因为评论要与所评论文章的id相同，所以采用内连接查询
+    </select>
+
+    </mapper>

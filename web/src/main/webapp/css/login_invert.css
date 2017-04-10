@@ -1,0 +1,82 @@
+.continer_login{
+	background-color: #5048f7;
+	overflow: hidden;
+}
+.continer_login h1{
+	width:288px;
+	height: 42px;
+	line-height: 42px;
+	margin: 80px auto 23px;
+	color: #f5f9ff;
+	font-size: 36px;
+	font-family: "FZLTZCHK -GBK1-0*";
+}
+.login{
+	width: 440px;
+	height: 211px;
+	margin:0 auto;
+	overflow: hidden;
+	background:url("../img/common/login.gif") no-repeat;
+}
+.login_peo{
+	width: 390px;
+	height: 49px;
+	margin: 40px auto 20px;
+	padding-top: 10px;
+}
+.login_peo span{
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	background: url("../img/common/loginpeo_icon.gif") no-repeat;
+}
+.continer_login input{
+	width: 346px;
+	height:30px;
+	line-height: 30px;
+	padding: 0px 5px;
+	display: inline-block;
+	background: inherit;
+	border:none;
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	font-family: "宋体";
+
+}
+.login hr{
+	width: 390px;
+	height: 0px;
+	border:solid 1px;
+	margin:0 auto 20px;
+	color: #5048f7;
+}
+.login_pass{
+	width: 390px;
+	height: 25px;
+	margin: 0 auto;
+}
+.login_pass span{
+	width: 22px;
+	height: 34px;
+	display: inline-block;
+	background: url("../img/common/lock_icon.gif") no-repeat;
+}
+.continer_login input[type="submit"]{
+	width: 108px;
+	height: 38px;
+	line-height: 38px;
+	text-align: center;	
+	float:right;
+	margin-right: 25px; 
+	color: #dbdbdb;
+	font-size: 23px;
+	font-family: "Adobe 宋体 Std L";
+	background: url("../img/common/login_icon.gif");
+}
+.login_invert{
+	width: 440px;
+	height: 186px;
+	margin:0 auto;
+	background:url("../img/common/login_invert.gif");
+}

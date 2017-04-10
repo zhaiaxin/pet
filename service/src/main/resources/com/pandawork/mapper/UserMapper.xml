@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pandawork.mapper.UserMapper">
+
+    <insert id="insert">
+        INSERT INTO `t_user`
+        (`userName`,`password`,`judge_id`)
+        VALUES
+        (#{user.userName},#{user.password},#{user.judgeId})
+    </insert>
+
+    <delete id="delete">
+        DELETE FROM `t_user`
+        WHERE id = #{id}
+    </delete>
+
+    <update id="update">
+        UPDATE `t_user`
+        SET `userName` = #{user.userName},
+            `password` = #{user.password},
+            `judge_id` = #{user.judgeId}
+        WHERE id = #{user.id}
+    </update>
+
+    <select id="queryByUserName" resultMap="pw.User">
+        SELECT id,userName,password,judge_id
+        FROM `t_user`
+        WHERE `userName` = #{userName}
+    </select>
+
+    <select id="queryById" resultMap="pw.User" ><!--pw是啥？ 这里的Cartoon就是实体类  -->
+        SELECT id,userName,password,judge_id
+        FROM `t_user`
+        WHERE `id` = #{id}
+    </select>
+
+    <select id="listAll" resultMap="pw.User"><!--全部用户  -->
+        SELECT id,userName,password,judge_id
+        FROM `t_user`
+    </select>
+
+    <select id="listUser" resultMap="pw.User"><!--一般用户，及judgeId为零  -->
+        SELECT id,userName,password,judge_id
+        FROM `t_user`
+        WHERE `judge_id` = 0
+    </select>
+
+
+
+</mapper>

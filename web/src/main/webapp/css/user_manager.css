@@ -1,0 +1,7 @@
+.operate{
+	width: 16px;
+	height: 16px;
+	margin-left: 9px;
+	display: inline-block;
+	background: url("../img/common/operate.gif");
+}

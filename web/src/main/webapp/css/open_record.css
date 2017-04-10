@@ -1,0 +1,42 @@
+.control_nea{
+	margin-top: 20px;
+}
+.check{
+	width: 30px;
+	height: 19px;
+	padding:2px 13px 0 16px;
+	text-align: center;
+	cursor: pointer;
+	color: #ffffff;
+	font-size: 16px;
+	font-family: '宋体';
+	background: url("../img/common/check.gif") no-repeat;
+}
+.delete{
+	width: 62px;
+	height: 19px;
+	padding:2px 2px 0 4px;
+	text-align: center;
+	color: #ffffff;
+	font-size: 16px;
+	font-family: '宋体';
+	background:url("../img/common/delete.gif") no-repeat;
+}
+.full_bg{
+	width: 100%;
+	height:100%;
+	background-color: #333333;
+	opacity:0.6;
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:3;
+	display: none;
+}
+.full_content{
+	left:50%;
+	position:relative;
+	top:50%;
+	z-index:5;
+	display:none;
+}

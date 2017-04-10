@@ -1,0 +1,22 @@
+.control_nea{
+	margin-top: 20px;
+	float: left;
+}
+.mod{
+	width:17px;
+	height: 10px;
+	padding: 1px 5px;
+	color: #f9f9f9;
+	font-size: 9px;
+	font-family: '宋体';
+	background: url("../img/common/mod.gif") no-repeat;
+}
+.keysearch {
+	width: 60px;
+	height: 25px;
+	float: right;
+	margin-top: 20px;
+	margin-right: 95px;
+	cursor: pointer;
+	background: url("../../img/common/search.gif") no-repeat;
+}

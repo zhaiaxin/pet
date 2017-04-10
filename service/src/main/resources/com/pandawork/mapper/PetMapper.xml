@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pandawork.mapper.PetMapper">
+
+    <insert id="newPet">
+        INSERT INTO `t_pet`
+        (`classification_id`,`classification_p_id`,
+         `name`,`abstracts`,`shape_abstract`,
+        `eye`,`ear`,
+        `tail`,`hair`,
+        `nose`,`with_people`,
+        `character`)
+        VALUES (#{pet.classificationId},#{pet.classificationPId},
+        #{pet.name},#{pet.abstracts},#{pet.shapeAbstract},
+        #{pet.eye}, #{pet.ear},#{pet.tail},#{pet.hair},#{pet.nose},#{pet.withPeople},#{pet.character}
+        )
+    </insert>
+
+    <update id="updatePet">
+        UPDATE `t_pet`
+        SET
+        `classification_id` = #{pet.classificationId},
+        `classification_p_id` = #{pet.classificationPId},
+        `name` = #{pet.name},
+        `abstracts` = #{pet.abstracts},
+        `shape_abstract` = #{pet.shapeAbstract},
+        `eye` = #{pet.eye},
+        `ear` = #{pet.ear},
+        `tail` = #{pet.tail},
+        `hair` = #{pet.hair},
+        `nose` = #{pet.nose},
+        `with_people` = #{pet.withPeople},
+        `character` = #{pet.character}
+        WHERE `id` = #{pet.id}
+    </update>
+
+    <delete id="delPetById">
+        DELETE FROM `t_pet`
+        WHERE `id` = #{id}
+    </delete>
+
+    <select id="queryByUserName" resultMap="pw.User">
+        SELECT id,userName,password,judge_id
+        FROM `t_user`
+        WHERE `userName` = #{userName}
+    </select>
+
+
+
+    <select id="queryPetById" resultMap="pw.Pet" >
+        SELECT `classification_id`,`classification_p_id`,`name`,`abstracts`,`shape_abstract`,`eye`,`ear`,`tail`,`hair`,`nose`,`character`,`with_people`
+        FROM `t_pet`
+        WHERE `id` = #{id}
+    </select>
+
+
+    <select id="queryByClassificationId" resultMap="pw.Pet">
+        SELECT `classification_id`,`classification_p_id`,`name`,`abstracts`,`shape_abstract`,`eye`,`ear`,`tail`,`hair`,`nose`,`character`,`with_people`
+        FROM `t_pet`
+        WHERE `classification_id` = #{classificationId}
+    </select>
+
+    <select id="queryByClassificationPId" resultMap="pw.Pet">
+        SELECT `classification_id`,`classification_p_id`,`name`,`abstracts`,`shape_abstract`,`eye`,`ear`,`tail`,`hair`,`nose`,`character`,`with_people`
+        FROM `t_pet`
+        WHERE `classification_p_id` = #{classificationPId}
+    </select>
+
+
+
+
+
+</mapper>

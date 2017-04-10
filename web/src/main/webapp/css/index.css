@@ -1,0 +1,57 @@
+.wel_peo_ind{
+	width:883px;
+}
+.block_form_ind{
+	width: 960px;
+	height: 100%;
+}
+.block_form_ind h1{
+	margin:34px auto 40px;
+	text-align: center;
+	color: #5757f7;
+	font-size: 36px;
+	font-family: "FZLTZCHK -GBK1-0*";
+}
+.block_form_ind hr{
+	width: 924px;
+	height: 2px;
+	border:solid 1px;
+	margin:0 auto 32px;
+	color: #5757f7;
+}
+
+.block_form_ind ul{
+	width: 808px;
+	height: 132px;
+	margin:0 98px 0 54px;
+}
+.block_form_ind ul li{
+	width: 132px;
+	height: 150px;
+	margin-left: 70px;
+	text-align: center;
+	float: left;
+}
+.block_form_ind ul li a{
+	width: 132px;
+	height: 132px;
+	cursor: pointer;
+	display: block;
+}
+.block_form_ind ul li p{
+	color: #4085b4;
+	font-size: 21px;
+	font-family: "FZLTZCHK -GBK1-0*";
+}
+.item_invite{
+	background: url("../img/common/vistor_invite.gif");
+}
+.item_user{
+	background: url("../img/common/user_manager.gif");
+}
+.item_key{
+	background: url("../img/common/key_manager.gif");
+}
+.item_open{
+	background: url("../img/common/open_record.gif");
+}
